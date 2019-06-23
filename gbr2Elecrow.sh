@@ -43,7 +43,6 @@ else
         mv "$f" "$t"
     else
         echo $fがありません
-        exit
     fi
     
     f="$file-B_Cu.gbr"
@@ -53,7 +52,6 @@ else
         mv "$f" "$t"
     else
         echo $fがありません
-        exit
     fi
     
     f="$file-F_Mask.gbr"
@@ -63,7 +61,6 @@ else
         mv "$f" "$t"
     else
         echo $fがありません
-        exit
     fi
     
     f="$file-B_Mask.gbr"
@@ -73,7 +70,6 @@ else
         mv "$f" "$t"
     else
         echo $fがありません
-        exit
     fi
     
     f="$file-F_Silks.gbr"
@@ -83,7 +79,6 @@ else
         mv "$f" "$t"
     else
         echo $fがありません
-        exit
     fi
     
     f="$file-B_Silks.gbr"
@@ -93,7 +88,6 @@ else
         mv "$f" "$t"
     else
         echo $fがありません
-        exit
     fi
     
     f="$file-PTH.drl"
@@ -103,7 +97,6 @@ else
         mv "$f" "$t"
     else
         echo $fがありません
-        exit
     fi
     
     f="$file-NPTH.drl"
@@ -113,7 +106,6 @@ else
         mv "$f" "$t"
     else
         echo $fがありません
-        exit
     fi
     
     f="$file-Edge_Cuts.gbr"
@@ -123,7 +115,6 @@ else
         mv "$f" "$t"
     else
         echo $fがありません
-        exit
     fi
     
 fi
