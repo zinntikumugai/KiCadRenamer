@@ -18,7 +18,7 @@ cp *.gbr *.drl $wrokdir
 cd $wrokdir
 
 file=
-RES=`find -maxdepth 1 -name *-F_Cu.gbr 2>/dev/null`
+RES=`find -maxdepth 1 -name *-Edge_Cuts.gbr 2>/dev/null`
 if [ $? -ne 0 ]; then
     echo エラーが発生しました
     exit　
@@ -27,7 +27,7 @@ elif [ -z "$RES" ]; then
     exit
 else
     echo $RES
-    if [[ $RES =~ ^./(.+)-F_Cu.gbr ]]; then
+    if [[ $RES =~ ^./(.+)-Edge_Cuts.gbr ]]; then
         file=${BASH_REMATCH[1]}
     fi
 fi
