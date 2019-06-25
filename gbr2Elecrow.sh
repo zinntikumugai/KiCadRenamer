@@ -18,7 +18,7 @@ cp *.gbr *.drl $wrokdir
 cd $wrokdir
 
 file=
-RES=`find -maxdepth 1 -name *-F_Cu.gbr 2>/dev/null`
+RES=`find -maxdepth 1 -name *-Edge_Cuts.gbr 2>/dev/null`
 if [ $? -ne 0 ]; then
     echo エラーが発生しました
     exit　
@@ -27,7 +27,7 @@ elif [ -z "$RES" ]; then
     exit
 else
     echo $RES
-    if [[ $RES =~ ^./(.+)-F_Cu.gbr ]]; then
+    if [[ $RES =~ ^./(.+)-Edge_Cuts.gbr ]]; then
         file=${BASH_REMATCH[1]}
     fi
 fi
@@ -43,7 +43,6 @@ else
         mv "$f" "$t"
     else
         echo $fがありません
-        exit
     fi
     
     f="$file-B_Cu.gbr"
@@ -53,7 +52,6 @@ else
         mv "$f" "$t"
     else
         echo $fがありません
-        exit
     fi
     
     f="$file-F_Mask.gbr"
@@ -63,7 +61,6 @@ else
         mv "$f" "$t"
     else
         echo $fがありません
-        exit
     fi
     
     f="$file-B_Mask.gbr"
@@ -73,7 +70,6 @@ else
         mv "$f" "$t"
     else
         echo $fがありません
-        exit
     fi
     
     f="$file-F_Silks.gbr"
@@ -83,7 +79,6 @@ else
         mv "$f" "$t"
     else
         echo $fがありません
-        exit
     fi
     
     f="$file-B_Silks.gbr"
@@ -93,7 +88,6 @@ else
         mv "$f" "$t"
     else
         echo $fがありません
-        exit
     fi
     
     f="$file-PTH.drl"
@@ -103,7 +97,6 @@ else
         mv "$f" "$t"
     else
         echo $fがありません
-        exit
     fi
     
     f="$file-NPTH.drl"
@@ -113,7 +106,6 @@ else
         mv "$f" "$t"
     else
         echo $fがありません
-        exit
     fi
     
     f="$file-Edge_Cuts.gbr"
@@ -123,7 +115,6 @@ else
         mv "$f" "$t"
     else
         echo $fがありません
-        exit
     fi
     
 fi
